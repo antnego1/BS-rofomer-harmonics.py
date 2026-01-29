@@ -1,0 +1,10 @@
+from role_refinement import role_guided_refine
+import soundfile as sf
+
+# After RoFormer inference
+orig, sr = sf.read("mixture.wav")
+solo_guide, _ = sf.read("solo_reference.wav")
+
+refined_solo = role_guided_refine(orig, solo_guide, sr)
+
+sf.write("solo_refined.wav", refined_solo, sr)
