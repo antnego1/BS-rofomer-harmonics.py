@@ -1,0 +1,6 @@
+roformer-role-refinement/
+│
+├── role_refinement.py
+├── example_usage.py
+├── README.md
+└── requirements.txt
